@@ -1,0 +1,131 @@
+header {
+  background-color: rgb(58, 57, 57);
+  height: 4rem;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarTitle {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarTitle > h1 {
+  font-size: 2rem;
+  margin: 0 8px;
+}
+
+.wrapperHome {
+  margin: 1rem;
+}
+
+.wrapperHome > h2 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.wrapperHome > h2:nth-child(3) {
+  font-weight: bold;
+  margin: 16px;
+}
+
+.wrapperHome input {
+  margin: 1rem 0;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid rgb(148, 148, 253);
+  transition: border 0.25s;
+}
+
+.wrapperHome form input:focus {
+  border-color: rgb(255, 255, 255);
+  outline: none;
+}
+
+.btnTambah {
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(89, 89, 248);
+  transition: background-color 0.25s;
+}
+
+.btnTambah:hover {
+  background-color: rgb(72, 72, 199);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-row: 6rem;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: rgb(85, 84, 84);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.card > input {
+  display: inline-block;
+}
+
+.wrapper-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.wrapper-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background: #606062;
+  border-radius: 7px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 5);
+}
+
+.wrapper-checkbox input:checked ~ .checkmark {
+  background-image: linear-gradient(#255cd2, #1d52c1);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.wrapper-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.wrapper-checkbox .checkmark:after {
+  left: 0.45em;
+  top: 0.2em;
+  width: 0.24em;
+  height: 0.6em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
