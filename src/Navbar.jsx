@@ -8,7 +8,7 @@ const Navbar = () => {
     <header>
       <nav>
         <div className="navbarTitle">
-          <img src={reactImg} alt="" />
+          <img src={reactImg} className="App-logo" alt="Logo" />
           <h1>Todo List</h1>
         </div>
       </nav>
